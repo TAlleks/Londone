@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 982e00f1c6cb0d744a9000f446a65e89
+timeCreated: 1517422879
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 14302
+  packageName: Unity to Sketchfab Exporter
+  packageVersion: v0.0.85a (alpha)
+  assetPath: Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFColorSpace.cginc
+  uploadId: 228381

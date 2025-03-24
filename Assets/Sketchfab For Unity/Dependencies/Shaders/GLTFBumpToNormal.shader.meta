@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bf77d6cca4eaadb4888b0db5c8c78ccc
+timeCreated: 1517422879
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 14302
+  packageName: Unity to Sketchfab Exporter
+  packageVersion: v0.0.85a (alpha)
+  assetPath: Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFBumpToNormal.shader
+  uploadId: 228381

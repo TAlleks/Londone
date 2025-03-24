@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 30c8fbce04a433c45a2d8fb1e3f0829f
+timeCreated: 1517422879
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 14302
+  packageName: Unity to Sketchfab Exporter
+  packageVersion: v0.0.85a (alpha)
+  assetPath: Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFPackOccMetalRough.shader
+  uploadId: 228381

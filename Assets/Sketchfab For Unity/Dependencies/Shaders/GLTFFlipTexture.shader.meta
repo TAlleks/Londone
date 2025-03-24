@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2ab29c6a570472649b129cdceb843bb9
+timeCreated: 1517422879
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 14302
+  packageName: Unity to Sketchfab Exporter
+  packageVersion: v0.0.85a (alpha)
+  assetPath: Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFFlipTexture.shader
+  uploadId: 228381
