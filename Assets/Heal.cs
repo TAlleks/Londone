@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Heal : MonoBehaviour
@@ -10,7 +11,6 @@ public class Heal : MonoBehaviour
     private Color color_leaves;
     [SerializeField] private GameObject tree;
     [SerializeField] private GameObject leaves;
-    [SerializeField] Collision hand_collision;
     [SerializeField] private Player player;
     private float alpha = 1f;
 
@@ -28,28 +28,30 @@ public class Heal : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionStay(Collision collision)
     {
-        if(other.CompareTag("Hands"))
+        if (collision.gameObject.CompareTag("Hands"))
         {
-            Debug.Log("Касание");
+
             Color _color_tree = color_tree;
             Color _color_leaves = color_leaves;
             if (alpha > 0)
             {
-                alpha -= 0.002f;
+                alpha -= 0.004f;
                 color_tree.a = alpha;
                 color_leaves.a = alpha;
+
                 if (player.HP < 100)
                 {
-                    player.HP += 0.2f;
+                    player.HP += 0.4f;
                 }
             }
-            
+
             renderer_tree.material.color = _color_tree;
             renderer_leaves.material.color = _color_leaves;
         }
     }
+
 
     
 }
