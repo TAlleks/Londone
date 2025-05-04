@@ -38,15 +38,27 @@ public class GlowingRock : MonoBehaviour
     }
 
     // Changed from OnCollisionEnter to OnTriggerEnter if using trigger colliders
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    // Debug log to verify collisions are detected
+    //    Debug.Log("Collided with: " + collision.gameObject.name);
+
+    //    if (isHoldingKnife && collision.gameObject == knifeInteractable.gameObject)
+    //    {
+    //        Debug.Log("Knife poked the rock!");
+    //        StartCoroutine(FlashRed());
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
     {
         // Debug log to verify collisions are detected
-        Debug.Log("Collided with: " + collision.gameObject.name);
+        //Debug.Log("Collided with: " + collision.gameObject.name);
 
-        if (isHoldingKnife && collision.gameObject == knifeInteractable.gameObject)
+        if (isHoldingKnife && other.CompareTag("Knife")) 
         {
             Debug.Log("Knife poked the rock!");
-            StartCoroutine(FlashRed());
+            StartCoroutine(FlashRed()); 
         }
     }
 
