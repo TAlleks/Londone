@@ -13,7 +13,9 @@ public class SearchState : BaseState
         enemy.NavMeshAgent.isStopped = false;
         searchTimer = 0f;
         lastKnownPosition = enemy.Player.position; 
-        enemy.NavMeshAgent.SetDestination(lastKnownPosition); 
+        enemy.NavMeshAgent.SetDestination(lastKnownPosition);
+        enemy.animator.SetBool("isAgro", true);
+        enemy.animator.SetBool("isAttacking", false);
     }
 
     public override void UpdateState(EnemyStateManager enemy)
@@ -27,7 +29,7 @@ public class SearchState : BaseState
 
         if (searchTimer >= enemy.SearchTime)
         {
-            enemy.SwitchState(enemy.patrolState);
+            enemy.SwitchState(enemy.idleState);
         }
 
         
@@ -35,6 +37,7 @@ public class SearchState : BaseState
 
     public override void ExitState(EnemyStateManager enemy)
     {
+        enemy.animator.SetBool("isAgro", false);
         Debug.Log("Exited Search State");
         enemy.NavMeshAgent.isStopped = true;
     }

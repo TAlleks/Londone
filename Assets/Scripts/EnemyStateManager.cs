@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class EnemyStateManager : MonoBehaviour
 {
+    [SerializeField] public Animator animator;
+    [SerializeField] Collider collider;
     [SerializeField] NavMeshAgent navMeshAgent;
     [SerializeField] Transform player;
     [SerializeField] float viewDistance = 10f;        
-    [SerializeField] float attackRange = 2f;        
+    [SerializeField] public float attackRange = 2f;        
     [SerializeField] float searchTime = 5f;          
 
     Transform target;
@@ -17,6 +19,7 @@ public class EnemyStateManager : MonoBehaviour
     public ChaseState chaseState = new ChaseState();
     public AttackState attackState = new AttackState();
     public SearchState searchState = new SearchState();
+    public IdleState idleState = new IdleState();
 
     
     public NavMeshAgent NavMeshAgent { get { return navMeshAgent; } }
@@ -45,7 +48,7 @@ public class EnemyStateManager : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log($"что {target.position.ToString()}");
+        //Debug.Log($"что {target.position.ToString()} {currentState.ToString()} {CanSeePlayer()}");
         navMeshAgent.destination = target.position;
         currentState.UpdateState(this); 
         
@@ -68,24 +71,45 @@ public class EnemyStateManager : MonoBehaviour
 
     public bool CanSeePlayer()
     {
-        if (player == null) return false;  
-        if (Vector3.Distance(transform.position, player.position) > viewDistance) return false;
+        return DistanceToTarget() <= viewDistance;
 
-        Vector3 direction = player.position - transform.position;
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, direction, out hit, viewDistance))
-        {
-            if (hit.transform == player)
-            {
-                return true;
-            }
-        }
-        return false;
+        //if (player == null) return false;  
+        //if (Vector3.Distance(transform.position, player.position) > viewDistance) return false;
+
+        //Vector3 direction = player.position - transform.position;
+        //RaycastHit hit;
+        //if (Physics.Raycast(transform.position, direction, out hit, viewDistance))
+        //{
+        //    if (hit.transform == player)
+        //    {
+        //        return true;
+        //    }
+        //}
+        //return false;
     }
 
     public bool IsInAttackRange()
     {
         if (player == null) return false;  
         return DistanceToTarget() <= attackRange;
+    }
+
+
+
+    void ConditionsforAttack()
+    {
+        if (currentState == attackState)
+        {
+            SwitchState(searchState);
+        }
+    }
+
+    void ConditionsforHandAttack(int isOff)
+    {
+        if (isOff == 0)
+        {
+            collider.enabled = false;
+        }
+        else { collider.enabled = true; }
     }
 }
