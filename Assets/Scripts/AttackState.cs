@@ -14,6 +14,7 @@ public class AttackState : BaseState
 
     public override void UpdateState(EnemyStateManager enemy)
     {
+        enemy.Rotate();
         if (!enemy.IsInAttackRange())
         {
             enemy.SwitchState(enemy.chaseState);

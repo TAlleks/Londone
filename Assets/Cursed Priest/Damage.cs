@@ -6,7 +6,7 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<DanageDetector>(out DanageDetector detector))
+        if (other.TryGetComponent<DanageDetector>(out DanageDetector detector)) 
         {
             detector.OnDamageDetector(damage);
             GetComponent<Collider>().enabled = false;

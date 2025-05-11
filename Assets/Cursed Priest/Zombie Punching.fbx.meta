@@ -62,15 +62,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 1
         messageOptions: 0
-      - time: 0.3804561
-        functionName: ConditionsforAttack
+      - time: 0.4415552
+        functionName: ConditionsforHandAttack
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 8806c1cb34243ed46965ae31f478a2cf, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.4415552
-        functionName: ConditionsforHandAttack
+      - time: 0.4870838
+        functionName: ConditionsforAttack
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 8806c1cb34243ed46965ae31f478a2cf, type: 3}
         floatParameter: 0

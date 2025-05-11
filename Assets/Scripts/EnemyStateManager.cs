@@ -43,7 +43,7 @@ public class EnemyStateManager : MonoBehaviour
     {
         GameObject searchPivot = new GameObject();
         SetDestination(player);
-        SwitchState(patrolState);
+        SwitchState(idleState);
     }
 
     public void Update()
@@ -67,8 +67,15 @@ public class EnemyStateManager : MonoBehaviour
     public float DistanceToTarget()
     {
         return (transform.position - target.transform.position).magnitude;
-    }
+    } //полсекунды, я спизжу кусок из своего кода
 
+    public void Rotate()
+    {
+        if (navMeshAgent.enabled)
+        {
+            navMeshAgent.transform.LookAt(navMeshAgent.destination);
+        }
+    }
     public bool CanSeePlayer()
     {
         return DistanceToTarget() <= viewDistance;
@@ -102,7 +109,7 @@ public class EnemyStateManager : MonoBehaviour
         {
             SwitchState(searchState);
         }
-    }
+    } 
 
     void ConditionsforHandAttack(int isOff)
     {
