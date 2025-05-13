@@ -1,0 +1,40 @@
+image: "/_Assets/Basic Charakter Spritesheet.png"
+tile_width: 48
+tile_height: 48
+collision_groups: "default"
+animations {
+  id: "Down"
+  start_tile: 1
+  end_tile: 4
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+animations {
+  id: "Idle"
+  start_tile: 1
+  end_tile: 1
+  playback: PLAYBACK_NONE
+  fps: 6
+}
+animations {
+  id: "Left"
+  start_tile: 9
+  end_tile: 12
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+animations {
+  id: "Right"
+  start_tile: 13
+  end_tile: 16
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+animations {
+  id: "Up"
+  start_tile: 5
+  end_tile: 8
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+extrude_borders: 2

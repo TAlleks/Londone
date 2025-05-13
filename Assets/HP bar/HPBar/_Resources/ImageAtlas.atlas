@@ -1,0 +1,13 @@
+images {
+  image: "/_Assets/HPBarIn.png"
+}
+images {
+  image: "/_Assets/HPBarOut.png"
+}
+images {
+  image: "/_Assets/Spike.png"
+}
+images {
+  image: "/_Assets/HpPotion.png"
+}
+extrude_borders: 2
