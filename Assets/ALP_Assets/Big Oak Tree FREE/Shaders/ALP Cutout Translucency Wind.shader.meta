@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: eee2400ecc6f042448341f68f711a01e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279431
+  packageName: Big Oak Tree FREE
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Big Oak Tree FREE/Shaders/ALP Cutout Translucency
+    Wind.shader
+  uploadId: 650236

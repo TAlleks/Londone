@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 36f134f332fcb71438aafca1e1673ead
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279431
+  packageName: Big Oak Tree FREE
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Big Oak Tree FREE/Core/Scripts/Controller/ALP8310_ControllerGlobal.asmdef
+  uploadId: 650236

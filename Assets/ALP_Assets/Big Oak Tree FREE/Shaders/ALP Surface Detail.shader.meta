@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c86ccf09a3cebd04e8387de9c92bfa23
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279431
+  packageName: Big Oak Tree FREE
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Big Oak Tree FREE/Shaders/ALP Surface Detail.shader
+  uploadId: 650236
