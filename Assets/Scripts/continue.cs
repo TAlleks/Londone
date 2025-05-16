@@ -1,39 +1,16 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ContinueGame : MonoBehaviour
+public class Continue1 : MonoBehaviour
 {
-    // Название сцены, которая загружается при продолжении
-    public string savedSceneName = "GameScene"; // Или другое, в зависимости от вашей игры
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Проверяем, есть ли сохранение (если нет — кнопка неактивна)
-        if (!PlayerPrefs.HasKey("SavedScene"))
-        {
-            GetComponent<UnityEngine.UI.Button>().interactable = false;
-        }
+        
     }
 
-    // Метод для загрузки сохранённой игры
-    public void LoadSavedGame()
+    // Update is called once per frame
+    void Update()
     {
-        // Загружаем сцену из сохранения (если есть)
-        if (PlayerPrefs.HasKey("SavedScene"))
-        {
-            string sceneToLoad = PlayerPrefs.GetString("SavedScene");
-            SceneManager.LoadScene(sceneToLoad);
-
-        }
-        else
-        {
-            Debug.LogWarning("No saved game found!");
-        }
+        
     }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-       // FindObjectOfType<PlayerSaveSystem>().LoadSavedData();
-    }
-
 }
