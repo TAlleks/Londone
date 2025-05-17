@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 07e4e5b34daac5a44a3832e4ff902b20
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279431
+  packageName: Big Oak Tree FREE
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Big Oak Tree FREE/Core/Scripts/Global Lighting/Editor/ALP8310_GlobalLightingWindow.cs
+  uploadId: 650236

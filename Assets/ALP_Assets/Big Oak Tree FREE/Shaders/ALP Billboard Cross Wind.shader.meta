@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c271d8d8e9a857d489348a894266272e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279431
+  packageName: Big Oak Tree FREE
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Big Oak Tree FREE/Shaders/ALP Billboard Cross Wind.shader
+  uploadId: 650236

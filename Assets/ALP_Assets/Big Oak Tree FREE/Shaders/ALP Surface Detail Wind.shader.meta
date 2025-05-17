@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0cfef65042c2e4941b0639ecee9b9f7f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279431
+  packageName: Big Oak Tree FREE
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Big Oak Tree FREE/Shaders/ALP Surface Detail Wind.shader
+  uploadId: 650236

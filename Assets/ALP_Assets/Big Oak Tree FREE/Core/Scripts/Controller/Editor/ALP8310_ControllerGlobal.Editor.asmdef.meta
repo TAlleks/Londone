@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b799570f1d290394792b20b16cc7b6c3
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279431
+  packageName: Big Oak Tree FREE
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Big Oak Tree FREE/Core/Scripts/Controller/Editor/ALP8310_ControllerGlobal.Editor.asmdef
+  uploadId: 650236
