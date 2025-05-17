@@ -25,7 +25,7 @@ public class LoadScreen : MonoBehaviour
         while (!loadAsync.isDone)
         {
             scale.value = loadAsync.progress;
-            Debug.Log(loadAsync.progress);
+            
 
             if (loadAsync.progress >= .9f && !loadAsync.allowSceneActivation)
             {
