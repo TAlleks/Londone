@@ -1,0 +1,13 @@
+function init(self)
+	msg.post("@render:", "use_camera_projection")
+end
+
+function update(self, dt)
+	local pos = go.get_position()
+	local new_pos = go.get_position("main:/Player")
+
+	local x_y_vector = vmath.vector3(new_pos.x, new_pos.y, pos.z)
+	pos = vmath.lerp(0.07, pos, x_y_vector)
+	go.set_position(pos)
+	
+end

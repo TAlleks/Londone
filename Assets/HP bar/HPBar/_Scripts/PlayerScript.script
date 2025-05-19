@@ -1,0 +1,149 @@
+local direction_name = "idle"
+
+local dash_counter = 0
+local is_dashing = false
+local dash_speed_mult = 1
+local dash_speed = 3.5
+local dash_duration = 0.25
+local dash_cooldown = 0.5
+local cooldown_timer = 0
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.speed = 140
+	self.direction = vmath.vector3()
+	self.hp = 100
+	self.max_hp = 100
+
+	self.max_hp_size = go.get("HpBar#HpIn", "size")
+	self.bar_position = go.get("HpBar#HpIn", "position")
+end
+
+function update(self, dt)
+	if vmath.length_sqr(self.direction) > 1 then
+		self.direction = vmath.normalize(self.direction)
+	end
+	
+	if is_dashing then
+		dash_counter = dash_counter - dt
+		if dash_counter <= 0 then
+			is_dashing = false
+			dash_speed_mult = 1
+			cooldown_timer = dash_cooldown
+		end
+	elseif cooldown_timer > 0 then
+		cooldown_timer = cooldown_timer - dt
+	end
+
+	local pos = go.get_position()
+
+	pos = pos + self.direction * self.speed * dt * dash_speed_mult
+	go.set_position(pos)
+
+	-- Change sprite animation based on direction
+	if self.direction.x > 0 then
+		if direction_name ~= "Right" then
+			sprite.play_flipbook("#sprite", "Right")
+			direction_name = "Right"
+		end
+	elseif self.direction.x < 0 then
+		if direction_name ~= "Left" then
+			sprite.play_flipbook("#sprite", "Left")
+			direction_name = "Left"
+		end
+	elseif self.direction.y < 0 then
+		if direction_name ~= "Down" then
+			sprite.play_flipbook("#sprite", "Down")
+			direction_name = "Down"
+		end
+	elseif self.direction.y > 0 then
+		if direction_name ~= "Up" then
+			sprite.play_flipbook("#sprite", "Up")
+			direction_name = "Up"
+		end
+	else
+		if direction_name ~= "Idle" then
+			sprite.play_flipbook("#sprite", "Idle")
+			direction_name = "Idle"
+		end
+	end
+	self.direction = vmath.vector3()
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("Dash") and action.pressed and not is_dashing and cooldown_timer <= 0 then
+		is_dashing = true
+		dash_counter = dash_duration
+		dash_speed_mult = dash_speed
+	end
+	if action_id == hash("Dash") and action.released then
+		is_dashing = false
+		dash_counter = 0
+		dash_speed_mult = 1
+		cooldown_timer = dash_cooldown
+	end
+
+	if action_id == hash("Left") then
+		self.direction.x = -1
+	elseif action_id == hash("Right") then
+		self.direction.x = 1
+	elseif action_id == hash("Up") then
+		self.direction.y = 1
+	elseif action_id == hash("Down") then
+		self.direction.y = -1
+	end
+end
+
+local function change_hp(self, value)
+	self.hp = self.hp + value
+
+	self.hp = math.min(self.max_hp, self.hp)
+	self.hp = math.max(0, self.hp)
+
+	msg.post("/GUI", "change_hp", {hp = self.hp, max_hp = self.max_hp})
+
+	local hp_percent = math.min(self.hp / self.max_hp, 1)
+	local new_hp_size = vmath.vector3(hp_percent * self.max_hp_size.x, self.max_hp_size.y, 0)
+	go.set("HpBar#HpIn", "size", new_hp_size)
+	
+	local new_bar_pos = vmath.vector3(-(self.max_hp_size.x - new_hp_size.x)/2, self.bar_position.y, 1)
+	go.set_position(new_bar_pos, "HpBar")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") then
+		if message.enter and message.group == hash("spike") then
+			change_hp(self, -15)
+		elseif message.enter and message.group == hash("hp_potion") then
+			change_hp(self, 35)
+		end
+	end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

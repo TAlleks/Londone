@@ -1,0 +1,12 @@
+function init(self)
+	self.hp = gui.get_node("HpIn")
+	self.max_hp = gui.get_size(self.hp).x
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("change_hp")then
+		local hp_percent = math.min(message.hp / message.max_hp, 1)
+		local new_hp_size = vmath.vector3(hp_percent * self.max_hp, gui.get_size(self.hp).y, 0)
+		gui.set_size(self.hp, new_hp_size)
+	end
+end

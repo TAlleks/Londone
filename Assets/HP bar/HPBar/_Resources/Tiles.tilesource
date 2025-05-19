@@ -1,0 +1,11 @@
+image: "/_Assets/GrassAndHills.png"
+tile_width: 16
+tile_height: 16
+collision_groups: "default"
+animations {
+  id: "anim"
+  start_tile: 78
+  end_tile: 78
+  playback: PLAYBACK_NONE
+}
+extrude_borders: 2

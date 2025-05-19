@@ -1,0 +1,60 @@
+script: "/_Scripts/GUI.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "ImageAtlas"
+  texture: "/_Resources/ImageAtlas.atlas"
+}
+nodes {
+  position {
+    x: 160.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  size {
+    x: 60.0
+    y: 12.0
+  }
+  type: TYPE_BOX
+  texture: "ImageAtlas/HPBarOut"
+  id: "HpOut"
+  inherit_alpha: true
+  slice9 {
+    x: 2.0
+    y: 2.0
+    z: 2.0
+    w: 2.0
+  }
+}
+nodes {
+  position {
+    x: 10.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  size {
+    x: 60.0
+    y: 12.0
+  }
+  type: TYPE_BOX
+  texture: "ImageAtlas/HPBarIn"
+  id: "HpIn"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  slice9 {
+    x: 3.0
+    y: 2.0
+    z: 3.0
+    w: 2.0
+  }
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
