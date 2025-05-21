@@ -12,6 +12,4 @@ public class ChangeScene : MonoBehaviour
         Setting.gameObject.SetActive(true);
 
     }
-
-
 }

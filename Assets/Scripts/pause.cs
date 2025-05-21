@@ -1,21 +1,14 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
+using UnityEngine.XR;
 
-public class pause : MonoBehaviour
+public class PauseGame : MonoBehaviour
 {
-    [SerializeField] private Button ButtonContinue;
 
     public GameObject pauseMenuCanvas;
 
     private bool isPaused = false;
-
-    public InputActionProperty leftAButtonAction;
-
-    void Awake()
-    {
-        ButtonContinue.onClick.AddListener(ResumeGame);
-    }
+    private bool wasPressed = false;
+    private InputDevice leftController;
 
     void Start()
     {
@@ -24,39 +17,34 @@ public class pause : MonoBehaviour
 
     void Update()
     {
-        if (leftAButtonAction.action.WasPressedThisFrame())
+
+        if (leftController == null || !leftController.isValid)
         {
-            TogglePause();
+            leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+            return;
         }
-    }
 
-
-    public void TogglePause()
-    {
-
-        if (isPaused)
+        if (leftController.TryGetFeatureValue(CommonUsages.menuButton, out bool isPressed))
         {
-            ResumeGame();
+            // Срабатывает только при новом нажатии
+            if (isPressed && !wasPressed)
+            {
+                isPaused = !isPaused; // Переключаем состояние паузы
+
+                if (isPaused)
+                {
+                    Time.timeScale = 0; // Пауза
+                    pauseMenuCanvas.SetActive(true);
+                    Debug.Log("Game Paused");
+                }
+                else
+                {
+                    Time.timeScale = 1; // Возобновление
+                    pauseMenuCanvas.SetActive(false);
+                    Debug.Log("Game Resumed");
+                }
+            }
+            wasPressed = isPressed;
         }
-        else
-        {
-            PauseGame();
-        }
-    }
-
-    void PauseGame()
-    {
-        isPaused = true;
-        Time.timeScale = 0f; // Останавливаем время в игре
-        pauseMenuCanvas.SetActive(true);
-
-    }
-
-    void ResumeGame()
-    {
-        isPaused = false;
-        Time.timeScale = 1f; // Возобновляем время в игре
-        pauseMenuCanvas.SetActive(false);
-
     }
 }
