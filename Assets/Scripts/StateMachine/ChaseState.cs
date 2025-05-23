@@ -5,7 +5,7 @@ public class ChaseState : BaseState
     public override void EnterState(EnemyStateManager enemy)
     {
         Debug.Log("Entered Chase State");
-        enemy.NavMeshAgent.speed = 3.5f;  
+        enemy.NavMeshAgent.speed = enemy.defaultSpeed;  
         enemy.NavMeshAgent.isStopped = false;
         enemy.animator.SetBool("isAgro", true);
 

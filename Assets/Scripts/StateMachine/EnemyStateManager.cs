@@ -9,7 +9,8 @@ public class EnemyStateManager : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float viewDistance = 10f;        
     [SerializeField] public float attackRange = 2f;        
-    [SerializeField] float searchTime = 5f;          
+    [SerializeField] float searchTime = 5f;
+    public float defaultSpeed = 1.5f;
 
     Transform target;
 
@@ -113,6 +114,7 @@ public class EnemyStateManager : MonoBehaviour
 
     void ConditionsforHandAttack(int isOff)
     {
+        Debug.Log($"testing {isOff} {collider.ToString()}");
         if (isOff == 0)
         {
             collider.enabled = false;

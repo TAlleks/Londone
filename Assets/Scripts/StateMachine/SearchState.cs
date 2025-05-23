@@ -9,7 +9,7 @@ public class SearchState : BaseState
     public override void EnterState(EnemyStateManager enemy)
     {
         Debug.Log("Entered Search State");
-        enemy.NavMeshAgent.speed = 1.5f; 
+        enemy.NavMeshAgent.speed = enemy.defaultSpeed; 
         enemy.NavMeshAgent.isStopped = false;
         searchTimer = 0f;
         lastKnownPosition = enemy.Player.position; 

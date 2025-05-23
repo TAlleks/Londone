@@ -1,0 +1,14 @@
+# Blender 4.4.3 MTL File: 'knight(b3_6).blend'
+# www.blender.org
+
+newmtl sword_mat
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/sword_mat_BaseColor.jpg
+map_Ns C:/sword_mat_Roughness.jpg
+map_refl C:/sword_mat_Metallic.jpg
+map_Bump -bm 1.000000 C:/sword_mat_Normal.png

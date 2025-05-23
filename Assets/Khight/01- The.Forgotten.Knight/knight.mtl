@@ -1,0 +1,71 @@
+# Blender 4.4.3 MTL File: 'knight(b3_6).blend'
+# www.blender.org
+
+newmtl bottom_armor_mat
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/bottom_armor_mat_BaseColor.jpg
+map_Ns C:/bottom_armor_mat_Roughness.jpg
+map_refl C:/bottom_armor_mat_Metallic.jpg
+map_Bump -bm 1.000000 C:/bottom_armor_mat_Normal.png
+
+newmtl center_armor_mat
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/center_armor_mat_BaseColor.jpg
+map_Ns C:/center_armor_mat_Roughness.jpg
+map_refl C:/center_armor_mat_Metallic.jpg
+map_Bump -bm 1.000000 C:/center_armor_mat_Normal.png
+
+newmtl cloak_mat
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/cloak_mat_BaseColor.jpg
+map_Ns C:/cloak_mat_Roughness.jpg
+map_d C:/cloak_mat_Alpha.jpg
+map_Bump -bm 1.000000 C:/cloak_mat_Normal.png
+
+newmtl details_mat
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/details_mat_BaseColor.jpg
+map_Ns C:/details_mat_Roughness.jpg
+map_refl C:/details_mat_Metallic.jpg
+map_Bump -bm 1.000000 C:/details_mat_Normal.png
+
+newmtl eye_plug_mat
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl top_armor_mat
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/top_armor_mat_BaseColor.jpg
+map_Ns C:/top_armor_mat_Roughness.jpg
+map_refl C:/top_armor_mat_Metallic.jpg
+map_Ke C:/top_armor_mat_Emissive.jpg
+map_Bump -bm 1.000000 C:/top_armor_mat_Normal.png
