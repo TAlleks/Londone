@@ -18,6 +18,7 @@ public class AttackState : BaseState
         if (!enemy.IsInAttackRange())
         {
             enemy.SwitchState(enemy.chaseState);
+
         }
 
         if (!enemy.CanSeePlayer())
@@ -25,7 +26,6 @@ public class AttackState : BaseState
             enemy.SwitchState(enemy.searchState);
         }
 
-        
         Debug.Log("Attacking!");
     }
 

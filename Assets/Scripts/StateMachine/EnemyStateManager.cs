@@ -6,7 +6,7 @@ public class EnemyStateManager : MonoBehaviour
     [SerializeField] public Animator animator;
     [SerializeField] Collider collider;
     [SerializeField] NavMeshAgent navMeshAgent;
-    [SerializeField] Transform player;
+    [SerializeField] Transform player; 
     [SerializeField] float viewDistance = 10f;        
     [SerializeField] public float attackRange = 2f;        
     [SerializeField] float searchTime = 5f;
