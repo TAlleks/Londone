@@ -1,16 +1,32 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class AchievementManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static AchievementManager Instance;
+
+    public GameObject achievementPanel;
+    public Text achievementText;
+
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UnlockAchievement(string achievementName)
     {
-        
+        achievementText.text = achievementName;
+        achievementPanel.SetActive(true);
+        Invoke("HideAchievement", 3f);
+        Debug.Log($"Получено: {achievementName}");
+    }
+
+    private void HideAchievement()
+    {
+        achievementPanel.SetActive(false);
     }
 }

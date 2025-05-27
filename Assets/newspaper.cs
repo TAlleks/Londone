@@ -1,16 +1,23 @@
 using UnityEngine;
 
-public class newspaper : MonoBehaviour
+public class Newspaper : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("Тип газеты")]
+    public bool isSpecial = false; // Отметьте в инспекторе для особой газеты
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            if (isSpecial)
+            {
+                GameManager.Instance.CollectSpecialNewspaper();
+            }
+            else
+            {
+                GameManager.Instance.CollectRegularNewspaper();
+            }
+            Destroy(gameObject);
+        }
     }
 }
