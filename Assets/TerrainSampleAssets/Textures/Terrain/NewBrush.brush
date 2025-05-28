@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: NewBrush
   m_EditorClassIdentifier: 
-  m_Mask: {fileID: 2800000, guid: bde7423cb35c64746b6b24c63040dcb0, type: 3}
+  m_Mask: {fileID: 2800000, guid: 7e6fff2112f33d748962082012d11cce, type: 3}
   m_Falloff:
     serializedVersion: 2
     m_Curve:
@@ -40,4 +40,4 @@ MonoBehaviour:
   m_RadiusScale: 1.4849247
   m_BlackWhiteRemapMin: 0
   m_BlackWhiteRemapMax: 1
-  m_InvertRemapRange: 1
+  m_InvertRemapRange: 0
