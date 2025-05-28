@@ -1,28 +1,34 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class AchievementManager : MonoBehaviour
 {
     public static AchievementManager Instance;
 
     public GameObject achievementPanel;
-    public Text achievementText;
+    public TMP_Text achievementText;
+    public float displayTime = 3f;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        if (Instance == null) Instance = this;
     }
 
-    public void UnlockAchievement(string achievementName)
+    public void UnlockAchievement(string name)
     {
-        achievementText.text = achievementName;
+        achievementText.text = name;
         achievementPanel.SetActive(true);
-        Invoke("HideAchievement", 3f);
-        Debug.Log($"Получено: {achievementName}");
+        Debug.Log("test1");
+        // Для VR: позиционируем перед игроком
+        if (Camera.main != null)
+        {
+        Debug.Log("test2");
+            achievementPanel.transform.position =
+                Camera.main.transform.position + Camera.main.transform.forward * 2f;
+        }
+
+        Invoke("HideAchievement", displayTime);
     }
 
     private void HideAchievement()

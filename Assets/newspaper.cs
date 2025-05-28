@@ -3,21 +3,17 @@ using UnityEngine;
 public class Newspaper : MonoBehaviour
 {
     [Header("Тип газеты")]
-    public bool isSpecial = false; // Отметьте в инспекторе для особой газеты
-
-    private void OnTriggerEnter(Collider other)
+    public bool isSpecial = false;
+    public void Collect()
     {
-        if (other.CompareTag("Player"))
-        {
+       
             if (isSpecial)
             {
                 GameManager.Instance.CollectSpecialNewspaper();
             }
-            else
-            {
-                GameManager.Instance.CollectRegularNewspaper();
-            }
+             GameManager.Instance.CollectRegularNewspaper();
+           
             Destroy(gameObject);
-        }
+        
     }
 }

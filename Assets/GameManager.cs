@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Настройки газет")]
-    public int totalRegularNewspapers = 5;
+    public int totalRegularNewspapers = 3;
     private int regularNewspapersCollected = 0;
     private bool specialNewspaperCollected = false;
 
@@ -35,10 +35,12 @@ public class GameManager : MonoBehaviour
 
     public void CollectSpecialNewspaper()
     {
+        Debug.Log("test3");
         if (!specialNewspaperCollected)
         {
+        Debug.Log("test4");
             specialNewspaperCollected = true;
-            AchievementManager.Instance.UnlockAchievement("Бейкер-стрит, 221b");
+            AchievementManager.Instance.UnlockAchievement("221B Baker Street");
         }
     }
 }

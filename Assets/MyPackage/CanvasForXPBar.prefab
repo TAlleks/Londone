@@ -89,6 +89,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HpBar: {fileID: 814801597310015590}
+  HpBar_: {fileID: 0}
+  animatorDoctorWho: {fileID: 0}
+  collider: {fileID: 0}
+  collider_trigger: {fileID: 0}
+  agent: {fileID: 0}
   HP: 100
 --- !u!1 &4000957565164149193
 GameObject:
@@ -247,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -382.4, y: 263.8}
+  m_AnchoredPosition: {x: -70, y: 52}
   m_SizeDelta: {x: 218, y: 27.3865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &500632969466994405
