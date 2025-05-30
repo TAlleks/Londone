@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class HPbar : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class HPbar : MonoBehaviour
     [SerializeField] public Collider collider_trigger;
     [SerializeField] public NavMeshAgent agent;
 
+    public bool isPlayer = false;
+
     public float HP = 100;
 
     public void ChangeHP(float amount)
@@ -19,12 +22,19 @@ public class HPbar : MonoBehaviour
         HpBar.fillAmount = HP / 100;
         if (HP <= 0)
         {
-            animatorDoctorWho.SetTrigger("Death");
-            collider.enabled = false;
-            agent.enabled = false;
-            collider_trigger.enabled = false;
-            HpBar_.enabled = false;
-            
+
+            if (isPlayer)
+            {
+                SceneManager.LoadScene("Defeat");
+            }
+            else
+            {
+                animatorDoctorWho.SetTrigger("Death");
+                collider.enabled = false;
+                agent.enabled = false;
+                collider_trigger.enabled = false;
+                HpBar_.enabled = false;
+            }
 
         }
 

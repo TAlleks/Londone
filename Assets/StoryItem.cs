@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class StoryItem : MonoBehaviour
 {
 
-    //public GameObject storyCanvas; // Ссылка на Canvas с текстом
+    public GameObject storyCanvas; // Ссылка на Canvas с текстом
     //public TextMeshProUGUI storyTextUI; // Текстовый элемент UI
     public GameObject panel;
 
@@ -16,6 +16,9 @@ public class StoryItem : MonoBehaviour
 
         //storyCanvas.SetActive(true);
         //storyTextUI.gameObject.SetActive(true);
+        storyCanvas.transform.position =
+               Camera.main.transform.position + Camera.main.transform.forward * 1.08f;
+        storyCanvas.transform.rotation = Camera.main.transform.rotation;
         panel.SetActive(true);
         isShowing = true;
 

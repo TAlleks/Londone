@@ -1,14 +1,19 @@
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 public class PauseGame : MonoBehaviour
 {
 
     public GameObject pauseMenuCanvas;
+    public GameObject pausePanel;
+    public GameObject settingsPanel;
 
     private bool isPaused = false;
     private bool wasPressed = false;
-    private InputDevice leftController;
+    private InputDevice leftController; // я один в упор не вижу ispressed?
 
     void Start()
     {
@@ -18,16 +23,16 @@ public class PauseGame : MonoBehaviour
     void Update()
     {
 
-        if (leftController == null || !leftController.isValid)
-        {
-            leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-            return;
-        }
+        //if (leftController == null || !leftController.isValid)
+        //{
+        //    leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        //    return;
+        //}
 
-        if (leftController.TryGetFeatureValue(CommonUsages.menuButton, out bool isPressed))
+        if (leftController.TryGetFeatureValue(CommonUsages.primaryButton, out bool isPressed) || Input.GetKey("up")) 
         {
             // Срабатывает только при новом нажатии
-            if (isPressed && !wasPressed)
+            if ((isPressed || Input.GetKey("up")) && !wasPressed)
             {
                 isPaused = !isPaused; // Переключаем состояние паузы
 
@@ -47,4 +52,19 @@ public class PauseGame : MonoBehaviour
             wasPressed = isPressed;
         }
     }
+
+    public void ToSettings()
+    {
+        pausePanel.SetActive(false);
+        settingsPanel.SetActive(true);
+
+    }
+
+    public void ToExit()
+    {
+        SceneManager.LoadScene("Main Menu");
+
+    }
+
+
 }

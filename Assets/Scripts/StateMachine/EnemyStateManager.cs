@@ -68,7 +68,7 @@ public class EnemyStateManager : MonoBehaviour
     public float DistanceToTarget()
     {
         return (transform.position - target.transform.position).magnitude;
-    } //полсекунды, я спизжу кусок из своего кода
+    } 
 
     public void Rotate()
     {
