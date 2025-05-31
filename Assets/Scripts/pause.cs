@@ -18,6 +18,9 @@ public class PauseGame : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1; // Возобновление
+
+        isPaused = false;
         pauseMenuCanvas.SetActive(false);
     }
 
@@ -66,7 +69,13 @@ public class PauseGame : MonoBehaviour
         
         SceneManager.LoadScene("Main Menu");
         int k = 1;
-        if (k == 1) { pausePanel.SetActive(false); }
+        if (k == 1) 
+        {
+            Time.timeScale = 1; // Возобновление
+
+            isPaused = false;
+            pausePanel.SetActive(false);
+        }
         
 
     }
