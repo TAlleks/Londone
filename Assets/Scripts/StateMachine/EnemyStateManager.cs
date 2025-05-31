@@ -114,7 +114,6 @@ public class EnemyStateManager : MonoBehaviour
 
     void ConditionsforHandAttack(int isOff)
     {
-        Debug.Log($"testing {isOff} {collider.ToString()}");
         if (isOff == 0)
         {
             collider.enabled = false;
