@@ -13,6 +13,7 @@ public class LoadScreen : MonoBehaviour
     public void Loading()
 
     {
+        PlayerPrefs.SetInt("inchurch", 0);
         LoadingScreen.SetActive(true);
         //StartCoroutine(LoadAsync());
         SceneManager.LoadScene("Location");
