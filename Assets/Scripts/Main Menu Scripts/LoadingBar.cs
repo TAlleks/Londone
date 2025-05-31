@@ -14,7 +14,8 @@ public class LoadScreen : MonoBehaviour
 
     {
         LoadingScreen.SetActive(true);
-        StartCoroutine(LoadAsync());
+        //StartCoroutine(LoadAsync());
+        SceneManager.LoadScene("Location");
     }
 
     IEnumerator LoadAsync()

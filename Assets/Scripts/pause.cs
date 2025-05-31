@@ -13,7 +13,8 @@ public class PauseGame : MonoBehaviour
 
     private bool isPaused = false;
     private bool wasPressed = false;
-    private InputDevice leftController; // я один в упор не вижу ispressed?
+    private InputDevice leftController;
+
 
     void Start()
     {
@@ -62,7 +63,11 @@ public class PauseGame : MonoBehaviour
 
     public void ToExit()
     {
+        
         SceneManager.LoadScene("Main Menu");
+        int k = 1;
+        if (k == 1) { pausePanel.SetActive(false); }
+        
 
     }
 
