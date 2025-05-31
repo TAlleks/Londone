@@ -27,11 +27,11 @@ public class PauseGame : MonoBehaviour
     void Update()
     {
 
-        //if (leftController == null || !leftController.isValid)
-        //{
-        //    leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        //    return;
-        //}
+        if (leftController == null || !leftController.isValid)
+        {
+            leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+            return;
+        }
 
         if (leftController.TryGetFeatureValue(CommonUsages.primaryButton, out bool isPressed) || Input.GetKey("up")) 
         {
