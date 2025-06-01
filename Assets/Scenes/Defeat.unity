@@ -1020,6 +1020,7 @@ GameObject:
   - component: {fileID: 1131869858}
   - component: {fileID: 1131869860}
   - component: {fileID: 1131869859}
+  - component: {fileID: 1131869861}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1145,6 +1146,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131869857}
   m_CullTransparentMesh: 1
+--- !u!114 &1131869861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131869857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - "\u0417\u0430\u043D\u043E\u0432\u043E"
+  - Try again
 --- !u!1 &1138456837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1343,7 @@ GameObject:
   - component: {fileID: 1190033304}
   - component: {fileID: 1190033306}
   - component: {fileID: 1190033305}
+  - component: {fileID: 1190033307}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1375,8 +1392,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Defeat
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a58c8333ed6d0cc429497d8936c13a8f, type: 2}
-  m_sharedMaterial: {fileID: 5985840908894944566, guid: a58c8333ed6d0cc429497d8936c13a8f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2319967530de4d740a67af5a1712b113, type: 2}
+  m_sharedMaterial: {fileID: 8931211160519436, guid: 2319967530de4d740a67af5a1712b113, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1406,7 +1423,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1452,6 +1469,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190033303}
   m_CullTransparentMesh: 1
+--- !u!114 &1190033307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190033303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - "\u041F\u043E\u0440\u0430\u0436\u0435\u043D\u0438\u0435"
+  - Defeat
 --- !u!1001 &1292907161
 PrefabInstance:
   m_ObjectHideFlags: 0
