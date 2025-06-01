@@ -270,7 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84277d6ce1f69e41bdd19d909b96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 1
   textElements: []
   russianTexts: []
   englishTexts: []
@@ -688,7 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u041D\u0430\u0437\u0430\u0434"
   - Back
@@ -1222,7 +1220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u041D\u0430\u0447\u0430\u0442\u044C"
   - Start
@@ -1450,7 +1447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
   - Settings
@@ -1770,7 +1766,6 @@ GameObject:
   - component: {fileID: 649721812}
   - component: {fileID: 649721817}
   - component: {fileID: 649721819}
-  - component: {fileID: 649721820}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1912,22 +1907,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!114 &649721820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649721811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  language: 0
-  text:
-  - "\u0412\u044B\u0445\u043E\u0434"
-  - Exit
 --- !u!1 &673687525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,7 +2056,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u0412\u044B\u0445\u043E\u0434"
   - Exit
@@ -2331,7 +2309,6 @@ GameObject:
   - component: {fileID: 919308939}
   - component: {fileID: 919308938}
   - component: {fileID: 919308941}
-  - component: {fileID: 919308942}
   m_Layer: 5
   m_Name: StartGame
   m_TagString: Untagged
@@ -2466,22 +2443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delete: {fileID: 264971964}
---- !u!114 &919308942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919308936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  language: 0
-  text:
-  - "\u041D\u0430\u0447\u0430\u0442\u044C"
-  - Start
 --- !u!1001 &934653543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3157,7 +3118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84277d6ce1f69e41bdd19d909b96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 1
   textElements: []
   russianTexts: []
   englishTexts: []
@@ -3310,7 +3270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
   - Russian
@@ -3818,7 +3777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
   - Settings
@@ -4599,7 +4557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u0417\u0432\u0443\u043A\u0438"
   - Sounds
@@ -4790,7 +4747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u042F\u0437\u044B\u043A"
   - Language
@@ -5019,7 +4975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u041C\u0443\u0437\u044B\u043A\u0430"
   - Music
@@ -5455,7 +5410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
   - Loading
@@ -5610,7 +5564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be4f0fb78162e44ebdb76a26c1d1ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: 0
   text:
   - "\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0438\u0439"
   - English
