@@ -77,11 +77,11 @@ public class VRGunController : XRGrabInteractable
         if (xrController != null)
         {
             // Определяем тип контроллера по тегу
-            if (interactor.transform.CompareTag("Right Hand"))
+            if (interactor.transform.CompareTag("Left Hand"))
             {
                 _currentController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
             }
-            else if (interactor.transform.CompareTag("Left Hand"))
+            else if (interactor.transform.CompareTag("Right Hand"))
             {
                 _currentController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
             }
@@ -114,7 +114,7 @@ public class VRGunController : XRGrabInteractable
 
     private void HandleShootingInput()
     {
-        if (_currentController.TryGetFeatureValue(CommonUsages.menuButton, out bool isGripPressed))
+        if (_currentController.TryGetFeatureValue(CommonUsages.triggerButton, out bool isGripPressed))
         {
             if (isGripPressed && !_wasTriggerPressed && Time.time >= _nextFireTime)
             {

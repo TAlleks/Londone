@@ -9,11 +9,11 @@ public class TriggerForChangeScene : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("inchurch") == 1)
+        if (sceneNameToLoad == "Location")
         {
-            player.transform.position = new Vector3(-62.5f, 2.06f, -249f);
+            //player.transform.position = new Vector3(-62.5f, 2.06f, -249f);
         }
-        PlayerPrefs.SetInt("inchurch", 0);
+        //PlayerPrefs.SetInt("inchurch", 0);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,5 +25,8 @@ public class TriggerForChangeScene : MonoBehaviour
 
             SceneManager.LoadScene(sceneNameToLoad);
         }
+
+        
+
     }
 }

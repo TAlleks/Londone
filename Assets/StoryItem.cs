@@ -1,6 +1,7 @@
-using TMPro;
+
 using UnityEngine;
-using UnityEngine.UI;
+using System.Threading.Tasks;
+using System.Collections;
 
 public class StoryItem : MonoBehaviour
 {
@@ -9,13 +10,13 @@ public class StoryItem : MonoBehaviour
     //public TextMeshProUGUI storyTextUI; // Текстовый элемент UI
     public GameObject panel;
 
-    private bool isShowing = false;
+
+
+    public bool isShowing = false;
 
     public void ShowStory()
     {
 
-        //storyCanvas.SetActive(true);
-        //storyTextUI.gameObject.SetActive(true);
         storyCanvas.transform.position =
                Camera.main.transform.position + Camera.main.transform.forward * 1.08f;
         storyCanvas.transform.rotation = Camera.main.transform.rotation;
@@ -23,6 +24,17 @@ public class StoryItem : MonoBehaviour
         isShowing = true;
 
         hpBarUs.MentalHP += 50;
+
+
+        //storyCanvas.SetActive(true);
+        //storyTextUI.gameObject.SetActive(true);
+        //storyCanvas.transform.position =
+        //       Camera.main.transform.position + Camera.main.transform.forward * 1.08f;
+        //storyCanvas.transform.rotation = Camera.main.transform.rotation;
+        //panel.SetActive(true);
+        //isShowing = true;
+
+        //hpBarUs.MentalHP += 50;
     }
 
     public void HideStory()
@@ -34,6 +46,18 @@ public class StoryItem : MonoBehaviour
         isShowing = false;
 
     }
+
+    void DelayedAction()
+    {
+        storyCanvas.transform.position =
+               Camera.main.transform.position + Camera.main.transform.forward * 1.08f;
+        storyCanvas.transform.rotation = Camera.main.transform.rotation;
+        panel.SetActive(true);
+        isShowing = true;
+
+        hpBarUs.MentalHP += 50;
+    }
+
 }
 
 

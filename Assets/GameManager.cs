@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Настройки газет")]
-    public int totalRegularNewspapers = 3;
-    private int regularNewspapersCollected = 0;
+    static public int totalRegularNewspapers = 8;
+    static public int regularNewspapersCollected = 0;
     private bool specialNewspaperCollected = false;
 
     private void Awake()
@@ -26,9 +26,10 @@ public class GameManager : MonoBehaviour
     {
         regularNewspapersCollected++;
         Debug.Log($"Обычных газет: {regularNewspapersCollected}/{totalRegularNewspapers}");
-
+        
         if (regularNewspapersCollected >= totalRegularNewspapers)
         {
+            //while (StoryItem.isShowing) ;
             AchievementManager.Instance.UnlockAchievement("Библиофил");
         }
     }
@@ -36,10 +37,12 @@ public class GameManager : MonoBehaviour
     public void CollectSpecialNewspaper()
     {
         Debug.Log("test3");
+
         if (!specialNewspaperCollected)
         {
         Debug.Log("test4");
             specialNewspaperCollected = true;
+            //while (StoryItem.isShowing) ;
             AchievementManager.Instance.UnlockAchievement("221B Baker Street");
         }
     }

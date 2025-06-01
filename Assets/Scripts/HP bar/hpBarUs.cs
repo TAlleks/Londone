@@ -23,6 +23,7 @@ public class hpBarUs : MonoBehaviour
 
     private void Start()
     {
+        //MentalHP = PlayerPrefs.GetFloat("MentalHP");
         // Проверка компонентов
         if (fadePanel == null)
         {
@@ -48,10 +49,12 @@ public class hpBarUs : MonoBehaviour
         panelColor.a = Mathf.MoveTowards(fadePanel.color.a, targetAlpha, fadeSpeed * Time.deltaTime);
         fadePanel.color = panelColor;
 
+        Debug.Log(MentalHP);
+        //PlayerPrefs.SetFloat("MentalHP", MentalHP);
+
         if (MentalHP <= 0)
         {
             SceneManager.LoadScene("Defeat");
-
         }
 
 
