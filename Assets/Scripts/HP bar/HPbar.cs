@@ -34,6 +34,8 @@ public class HPbar : MonoBehaviour
                 agent.enabled = false;
                 collider_trigger.enabled = false;
                 HpBar_.enabled = false;
+
+                hpBarUs.MentalHP +=100;
             }
 
         }

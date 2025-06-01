@@ -22,6 +22,7 @@ public class StoryItem : MonoBehaviour
         panel.SetActive(true);
         isShowing = true;
 
+        hpBarUs.MentalHP += 50;
     }
 
     public void HideStory()

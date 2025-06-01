@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class LanguageText : MonoBehaviour
 {
-    public int language;
+    public static int language;
     public string[] text;
     private Text textLine;
     void Start()

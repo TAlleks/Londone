@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class DanageDetector : MonoBehaviour
 {
     [SerializeField] public HPbar hpbar;
