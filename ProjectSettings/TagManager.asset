@@ -8,6 +8,8 @@ TagManager:
   - Hands
   - Knife
   - SpecialNewspaper
+  - Right Hand
+  - Left Hand
   layers:
   - Default
   - TransparentFX
