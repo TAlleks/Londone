@@ -50,8 +50,12 @@ public class EnemyStateManager : MonoBehaviour
     public void Update()
     {
         //Debug.Log($"что {target.position.ToString()} {currentState.ToString()} {CanSeePlayer()}");
+        if (navMeshAgent.enabled == true)
+        {
         navMeshAgent.destination = target.position;
         currentState.UpdateState(this); 
+
+        }
         
     }
 

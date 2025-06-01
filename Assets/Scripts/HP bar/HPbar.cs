@@ -32,8 +32,14 @@ public class HPbar : MonoBehaviour
                 animatorDoctorWho.SetTrigger("Death");
                 collider.enabled = false;
                 agent.enabled = false;
-                collider_trigger.enabled = false;
-                HpBar_.enabled = false;
+                if (collider_trigger != null)
+                {
+                    collider_trigger.enabled = false;
+                }
+                if (collider_trigger != null)
+                {
+                    HpBar_.enabled = false;
+                }
 
                 hpBarUs.MentalHP +=100;
             }

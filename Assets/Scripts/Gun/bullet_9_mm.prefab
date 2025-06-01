@@ -75,8 +75,9 @@ GameObject:
   - component: {fileID: 6673149181135448034}
   - component: {fileID: 681214967218183770}
   - component: {fileID: 6751724678026079140}
-  - component: {fileID: 1404018857616065394}
+  - component: {fileID: 5340836155787684100}
   - component: {fileID: 8866396855963516665}
+  - component: {fileID: 6915709006341152973}
   m_Layer: 0
   m_Name: bullet_9_mm
   m_TagString: Knife
@@ -150,8 +151,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1404018857616065394
-BoxCollider:
+--- !u!136 &5340836155787684100
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,9 +169,11 @@ BoxCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 17.01162, y: 7.560478, z: 14.551452}
-  m_Center: {x: -2.6257973, y: 0.037308335, z: 1.4480947}
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Height: 4.0433345
+  m_Direction: 0
+  m_Center: {x: -0.0329493, y: 0, z: 1.805212e-16}
 --- !u!114 &8866396855963516665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +188,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   isPlayer: 1
+--- !u!114 &6915709006341152973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4738953967702941223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09654cb6b5be20b48b3395f0a8a24292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  isBullet: 1
 --- !u!1 &5912847224309880702
 GameObject:
   m_ObjectHideFlags: 0

@@ -554,13 +554,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991959148657939221}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0633431, y: -0.03038871, z: -0.06910871, w: 0.9951322}
+  m_LocalRotation: {x: 0.0021595883, y: -0.74840504, z: -0.1111179, w: 0.65386397}
   m_LocalPosition: {x: -2.4, y: 0.44, z: -0.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 361251404303986896}
-  m_LocalEulerAnglesHint: {x: 7, y: -4, z: -8.19}
+  m_LocalEulerAnglesHint: {x: -9.41, y: -97, z: -8.66}
 --- !u!1 &1022351783975653881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +1945,7 @@ GameObject:
   - component: {fileID: 2017573676556054295}
   - component: {fileID: 6632359892393600309}
   - component: {fileID: 6148958191476577423}
+  - component: {fileID: 8870250058152318275}
   m_Layer: 0
   m_Name: mercenarys_shotgun
   m_TagString: Untagged
@@ -2168,7 +2169,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1808172861127528674}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -2217,8 +2218,8 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
-  firePoint: {fileID: 0}
+  m_FarAttachMode: 1
+  firePoint: {fileID: 3994999617499387407}
   bulletPrefab: {fileID: 4738953967702941223, guid: 106bff9c1cd7d1343a8467fe9d5a94b7, type: 3}
   bulletSpeed: 20
   fireRate: 0.2
@@ -2230,6 +2231,27 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: 2494dc04ff6c2d6498a6bb5bafe010b2, type: 3}
   emptySound: {fileID: 0}
   ammoDisplay: {fileID: 4210946734005889428}
+--- !u!65 &8870250058152318275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5488157270482589716}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.43386164, z: 0.30246696}
+  m_Center: {x: 7.759226e-10, y: -0.16410366, z: 0.18937418}
 --- !u!1 &5607602182982422731
 GameObject:
   m_ObjectHideFlags: 0
