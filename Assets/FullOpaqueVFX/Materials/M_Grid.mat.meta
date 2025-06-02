@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ec1d53d34aea7774297105f99a8a20e3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312563
+  packageName: Full Opaque Rain
+  packageVersion: 1.1
+  assetPath: Assets/FullOpaqueVFX/Materials/M_Grid.mat
+  uploadId: 747831

@@ -13,9 +13,9 @@ public class LoadScreen : MonoBehaviour
     public void Loading()
 
     {
-        PlayerPrefs.SetFloat("MentalHP", 100f);
+        //PlayerPrefs.SetFloat("MentalHP", 100f);
         PlayerPrefs.SetInt("inchurch", 0);
-        LoadingScreen.SetActive(true);
+        //LoadingScreen.SetActive(true);
         //StartCoroutine(LoadAsync());
         SceneManager.LoadScene("Location");
     }

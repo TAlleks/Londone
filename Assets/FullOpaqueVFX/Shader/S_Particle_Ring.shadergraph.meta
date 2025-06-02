@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: aa5f2f19ac7157a42939e11e44655e03
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312563
+  packageName: Full Opaque Rain
+  packageVersion: 1.1
+  assetPath: Assets/FullOpaqueVFX/Shader/S_Particle_Ring.shadergraph
+  uploadId: 747831

@@ -24,7 +24,7 @@ public class VRGunController : XRGrabInteractable
     public AudioClip shootSound;
     public AudioClip reloadSound;
     public AudioClip emptySound;
-    //public ParticleSystem muzzleFlash;
+    public ParticleSystem muzzleFlash;
 
     [Header("Ammo UI")]
     public TextMeshProUGUI ammoDisplay;
@@ -166,7 +166,7 @@ public class VRGunController : XRGrabInteractable
 
     private void PlayShootEffects()
     {
-        //muzzleFlash?.Play();
+        muzzleFlash.Play();
         _audioSource.PlayOneShot(shootSound);
         SendHapticImpulse(0.5f, 0.1f);
     }

@@ -49,7 +49,7 @@ public class hpBarUs : MonoBehaviour
         panelColor.a = Mathf.MoveTowards(fadePanel.color.a, targetAlpha, fadeSpeed * Time.deltaTime);
         fadePanel.color = panelColor;
 
-        Debug.Log(MentalHP);
+        //Debug.Log(MentalHP);
         //PlayerPrefs.SetFloat("MentalHP", MentalHP);
 
         if (MentalHP <= 0)

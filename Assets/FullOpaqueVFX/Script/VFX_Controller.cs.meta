@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8cb0306cbcec5be4cbc4ae0ad15bbe96
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312563
+  packageName: Full Opaque Rain
+  packageVersion: 1.1
+  assetPath: Assets/FullOpaqueVFX/Script/VFX_Controller.cs
+  uploadId: 747831

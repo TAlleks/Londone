@@ -14,12 +14,12 @@ public class HPbar : MonoBehaviour
 
     public bool isPlayer = false;
 
-    public float HP = 100;
+    public float HP = 100f;
 
     public void ChangeHP(float amount)
     {
         HP += amount;
-        HpBar.fillAmount = HP / 100;
+        HpBar.fillAmount = HP / 100f;
         if (HP <= 0)
         {
 
@@ -40,7 +40,6 @@ public class HPbar : MonoBehaviour
                 {
                     HpBar_.enabled = false;
                 }
-
                 hpBarUs.MentalHP +=100;
             }
 

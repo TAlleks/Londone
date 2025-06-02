@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1a17842c7a8b90b46ab039e080a2d864
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312563
+  packageName: Full Opaque Rain
+  packageVersion: 1.1
+  assetPath: Assets/FullOpaqueVFX/Materials/M_Particles_Lit.mat
+  uploadId: 747831

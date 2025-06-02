@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 335d67321fd1b4248af0b995d537ec9e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312563
+  packageName: Full Opaque Rain
+  packageVersion: 1.1
+  assetPath: Assets/FullOpaqueVFX/Settings/OptiFXPostProcessProfile.asset
+  uploadId: 747831

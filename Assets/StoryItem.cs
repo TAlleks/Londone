@@ -25,16 +25,6 @@ public class StoryItem : MonoBehaviour
 
         hpBarUs.MentalHP += 50;
 
-
-        //storyCanvas.SetActive(true);
-        //storyTextUI.gameObject.SetActive(true);
-        //storyCanvas.transform.position =
-        //       Camera.main.transform.position + Camera.main.transform.forward * 1.08f;
-        //storyCanvas.transform.rotation = Camera.main.transform.rotation;
-        //panel.SetActive(true);
-        //isShowing = true;
-
-        //hpBarUs.MentalHP += 50;
     }
 
     public void HideStory()
