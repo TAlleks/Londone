@@ -1,4 +1,3 @@
-using GLTF.Schema;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
