@@ -90,7 +90,7 @@ VR-проект на Unity: взаимодействие руками, игро�
 
 Участники, представленные в истории репозитория:
 
-**[TAlleks](https://github.com/TAlleks)** · **[dedjkje](https://github.com/dedjkje)** · **[yokominn](https://github.com/yokominn)**
+**[TAlleks](https://github.com/TAlleks)** · **[yokominn](https://github.com/yokominn)**
 
 Полный вклад — в [истории изменений](https://github.com/TAlleks/Londone/commits/main/).
 
